@@ -113,7 +113,17 @@ const productList = [
 //4 Update product name using product ID
 
 // function updateProductName (id,newName){
-    
+//     const product = productList.find((v)=>{
+//         return v.id===id;
+//     })
+//     if(product){
+//         product.name=newName;
+//         console.log(product);
+        
+//     }else{
+//         console.log("product not found");
+        
+//     }
 // }
 
 // (updateProductName(103,"abc"));
@@ -142,22 +152,73 @@ const productList = [
 //7   Find how many products each user has.
 
 
- function getuserProduct(productList){
-    const userProduct = productList.reduce((acc,curr)=>{
-        if(!acc[curr.userDetails.username]){
-            acc[curr.userDetails.username]=1;
-        }else{
-            acc[curr.userDetails.us]+=1
-        }
-        return acc
-    },{})
-    console.log(userProduct);
+//  function getuserProduct(productList){
+//     const userProduct = productList.reduce((acc,curr)=>{
+//         if(!acc[curr.userDetails.username]){
+//             acc[curr.userDetails.username]=1;
+//         }else{
+//             acc[curr.userDetails.username]+=1
+//         }
+//         return acc
+//     },{})
+//     console.log(userProduct);
     
- }
+//  }
 
-getuserProduct(productList)
+// getuserProduct(productList)
 
 
 
 //8 Find all reviews given by a particular user.
 
+// function getReviewByUser(id){
+//     let reviews =[];
+//     productList.forEach((product)=>{
+//         product.review.forEach((v)=>{
+//             if(v.userId===id){
+//                 reviews.push({
+//                     productId:product.id,
+//                     productName: product.name,
+//                     rating:v.rating,
+//                     comment:v.comment
+//                 })
+//             }
+//         })
+//     })
+//     console.log(reviews);
+    
+// }
+
+// getReviewByUser(501)
+
+
+
+
+
+//9  Create function to delete a product using ID
+
+// function deleteProduct(id){
+//     let newList = productList.filter((v)=>{
+//         return v.id!==id;
+//     })
+//     console.log(newList);
+    
+// }
+
+// deleteProduct(103)
+
+
+
+
+//10  Find the highest-priced product.
+
+// let highestPrice = 0;
+// let highestProduct;
+// productList.map((v)=>{
+//     if(v.price>highestPrice){
+//         highestPrice=v.price;
+//         highestProduct=v
+//     }
+
+// })
+//  console.log(highestProduct);
