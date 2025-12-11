@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+           
+        }
+        form{
+            width: 400px;
+            height: 450px;
+            border: 2px solid rgb(164, 164, 235);
+            padding-left: 50px;
+            font-size: 20px;
+           
+        }
+        button{
+            font-size: large;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <form onsubmit="handleSubmit(event)">
+      <h1>Register Form</h1>
+      <br />
+      <div>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          placeholder="Enter your Name"
+          id="name"
+          name="name"
+         
+        />
+      </div>
+      <br />
+
+      <div>
+        <label for="description">Description:</label>
+        <input
+          type="text"
+          placeholder="Enter description"
+          id="desc"
+          name="desc"
+        />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          placeholder="Enter your email"
+          id="email"
+          name="email"
+        />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="phone">Phone:</label>
+        <input
+          type="number"
+          placeholder="Enter your phone"
+          id="phone"
+          name="phone"
+        />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="gender">Choose Gender:</label>
+        <input type="radio" name="gender" id="gender" value="Male" /> Male
+        <input type="radio" name="gender" id="gender" value="Female" /> Female
+      </div>
+
+      <br />
+      <div>
+        <label for="check">Terms and condition: </label>
+        <input type="checkbox" name="check" id="check" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="profession">Profession:</label>
+        <select name="profession" id="profession">
+          <option value="Student">Student</option>
+          <option value="Experience">Experience</option>
+        </select>
+      </div>
+
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+    </div>
+  </body>
+
+  <script type="module" src="./build/script.js"></script>
+</html>
